@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [ "config:base" ],
+  "labels": [ "automerge", "dependencies" ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "description": [
+        "Updates in simple dependencies that don't actually ship as product -- pre-commit,",
+        "actions, etc -- can be automatically updated so long as all tests pass.  This requires",
+        "at least one workflow in child projects to trigger testing: if zero of zero workflows",
+        "fail, it's a pass, hence it's shipped/merged."
+      ],
+      "matchManagers": [ "bazel", "github-actions", "pre-commit" ],
+      "matchUpdateTypes": [ "patch", "digest", "rollback", "bump" ]
+    }
+  ],
+  "platformAutomerge": true,
+  "platformCommit": true,
+  "reviewers": [ "team:shipitshipit" ],
+  "semanticCommits": true,
+  "separateMultipleMajor": true,
+  "stabilityDays": 3
+}
+
