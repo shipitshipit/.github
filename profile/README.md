@@ -1,6 +1,9 @@
 # Ship it!  Ship it!
 
-This organization is intended ot hopd some CI/CD or CI/CD/CT utilities to help PEs, SREs, DevOps -minded people engaged in DevOps or MLOps to ship faster.  I could do this work as part of my personal account, but I feel this organization represents more of a "Neutral Zone" from which even I could even be removed.
+This organization is intended to host some CI/CD or CI/CD/CT utilities to help PEs, SREs, DevOps
+-minded people engaged in DevOps or MLOps to ship faster.  I could do this work as part of my
+personal account, but I feel this organization represents more of a "Neutral Zone" from which even
+I could eventually be removed if it moves on.
 
 It also acts as a logistical unit on which I've got some self-hosted runners.
 
@@ -22,6 +25,6 @@ No real charter, but I hope we can look at PRs quickly from a mindset of:
 
 Let's ship Shipping Tool improvements faster.
 
-Obviously, the silly things like formatitng and whatnot should be resolved by opinionated
-formatters: adopt the precommit triggers, and roll faster.
+Obviously, the silly things like formatting and whatnot should be resolved by opinionated
+formatters: adopt the pre-commit triggers, and roll faster.
 
