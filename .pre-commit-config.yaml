@@ -8,7 +8,7 @@
 ---
 repos:
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.0
+    rev: v1.32.0
     hooks:
       - id: yamllint
         args: [
@@ -16,8 +16,18 @@ repos:
           '{extends: relaxed, rules: {line-length: {max: 320}}}'
         ]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.20.0
+    rev: 0.26.3
     hooks:
       - id: check-github-actions
       - id: check-github-workflows
       - id: check-renovate
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v7.3.0
+    hooks:
+      - id: cspell
+        # a local allowlist of dictionary words in .github/cspell.yaml.  This can get comical --
+        # adding new words in every PR -- but the cost/benefit balance may avoid some embarassing
+        # typos
+        args: [ '--config', 'ci/cspell.yaml' ]
+        types: [file, markdown]
+
